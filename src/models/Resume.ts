@@ -13,6 +13,7 @@ export type ExperienceModel = {
   description: string
   projects?: ProjectModel[]
   duties?: string[]
+  otherRoles?: string[]
 }
 
 export type EducationModel = {

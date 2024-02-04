@@ -14,17 +14,31 @@ const Experience: React.FC<ExperienceModel> = ({
   to,
   description,
   projects,
+  otherRoles,
   duties
 }) => {
   return (
     <div className="mb-8">
-      <Heading text={`${title} - ${company}`} />
+      <Heading text={`${title} - ${company}`} level="h2" />
       <BodyText text={`${location} | ${from} - ${to}`} mb={2} />
-      <BodyText text={description} mb={4} />
-      {duties && <List items={duties} />}
+      <BodyText text={description} mb={2} />
+      {otherRoles && (
+        <>
+          <Heading text="Other Roles" level="h4" />
+          <List items={otherRoles} />
+        </>
+      )}
+
+      {duties && (
+        <>
+          <Heading text="Duties and Responsibilities" level="h2" />
+          <List items={duties} />
+        </>
+      )}
       {projects?.map((project, index) => (
         <Project key={index} {...project} />
       ))}
+      <hr className="mt-4" />
     </div>
   )
 }

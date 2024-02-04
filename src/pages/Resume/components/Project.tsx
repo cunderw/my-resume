@@ -8,7 +8,7 @@ import { ProjectModel } from '../../../models/Resume'
 const Project: React.FC<ProjectModel> = ({ name, description, duties }) => {
   return (
     <div className="mb-6">
-      <Heading level="h4" text={name} />
+      <Heading level="h2" text={name} />
       <BodyText text={description} mb={2} />
       <List items={duties} />
     </div>

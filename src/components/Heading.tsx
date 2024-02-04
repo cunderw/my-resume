@@ -7,7 +7,13 @@ type HeadingProps = {
 
 const Heading: React.FC<HeadingProps> = ({ text, level = 'h3' }) => {
   const Component = level
-  return <Component className="mb-2 text-xl font-bold">{text}</Component>
+  const textStyle = {
+    h1: 'text-xl font-bold',
+    h2: 'text-l font-bold',
+    h3: 'text-l',
+    h4: 'text-md'
+  }
+  return <Component className={`mb-2 ${textStyle[level]}`}>{text}</Component>
 }
 
 export default Heading
