@@ -8,11 +8,7 @@ type PictureProps = {
 const Picture: React.FC<PictureProps> = ({ src, alt }) => {
   return (
     <div className="mb-4 flex justify-center">
-      <img
-        src={src}
-        alt={alt}
-        className="h-48 w-48 rounded-full object-cover"
-      />
+      <img src={src} alt={alt} className="size-48 rounded-full object-cover" />
     </div>
   )
 }

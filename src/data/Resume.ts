@@ -168,4 +168,4 @@ const getResume = (): Promise<ResumeModel> => {
   })
 }
 
-export { getResume }
+export { dummyResume, getResume }
