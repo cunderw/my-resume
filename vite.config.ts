@@ -7,7 +7,6 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   plugins: [react(), eslintPlugin(), viteSvgr(), tsconfigPaths()],
-  base: '/my-resume/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
