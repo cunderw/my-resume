@@ -9,12 +9,15 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/resume" element={<ResumePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/" element={<AboutPage />} />
-      </Routes>
+      <div className="pt-16">
+        {' '}
+        <Routes>
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/" element={<AboutPage />} />
+        </Routes>
+      </div>
     </Router>
   )
 }
