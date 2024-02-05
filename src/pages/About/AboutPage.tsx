@@ -20,7 +20,7 @@ const AboutPage: React.FC = () => {
             <Picture src={imagePath} alt="Carson Underwood" />
           </div>
           <div className="flex flex-col space-y-4 md:col-span-1">
-            <Heading text="About Me" />
+            <Heading text="About Me" level="h1" />
             {resumeData.aboutMe.split('\n').map((text, index) => (
               <BodyText key={index} text={text} />
             ))}

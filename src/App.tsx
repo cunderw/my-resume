@@ -16,7 +16,7 @@ function App() {
       <ResumeProvider>
         <Router>
           <Navbar />
-          <div className="pt-16">
+          <div className="bg-gray-200 pb-2 pt-16">
             {' '}
             <Routes>
               <Route path="/about" element={<AboutPage />} />

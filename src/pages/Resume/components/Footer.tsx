@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full  py-4 text-center">
+    <footer className="w-full py-4 text-center">
       <a
         href="https://github.com/cunderw/my-resume"
         target="_blank"
