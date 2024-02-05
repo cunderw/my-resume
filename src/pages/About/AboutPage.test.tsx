@@ -31,7 +31,7 @@ describe('AboutPage Component', () => {
     })
 
     render(<AboutPage />)
-    expect(screen.getByText('Loading...')).toBeInTheDocument()
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()
   })
 
   test('displays about me section when data is loaded', () => {

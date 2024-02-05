@@ -9,7 +9,6 @@ const getResume = async (): Promise<ResumeModel> => {
 
   if (docSnap.exists()) {
     const data = docSnap.data()
-
     return mapResumeData(data)
   } else {
     throw new Error('Document does not exist!')

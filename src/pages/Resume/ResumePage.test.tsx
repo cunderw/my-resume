@@ -44,7 +44,7 @@ describe('ResumePage Component', () => {
     })
 
     render(<ResumePage />)
-    expect(screen.getByText('Loading...')).toBeInTheDocument()
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()
   })
 
   test('renders Resume component when data is loaded', async () => {

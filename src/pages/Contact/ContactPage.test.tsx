@@ -39,7 +39,7 @@ describe('ContactPage Component', () => {
     })
 
     render(<ContactPage />)
-    expect(screen.getByText('Loading...')).toBeInTheDocument()
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()
   })
 
   test('displays contact information when data is loaded', () => {

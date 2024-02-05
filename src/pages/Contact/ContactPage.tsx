@@ -2,6 +2,7 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa'
 
 import ContentWrapper from '../../components/ContentWrapper'
 import Heading from '../../components/Heading'
+import LoadingSpinner from '../../components/LoadingSpinner'
 import { useResume } from '../../contexts/ResumeContext'
 
 const ContactPage = () => {
@@ -9,7 +10,7 @@ const ContactPage = () => {
   return (
     <ContentWrapper>
       {!resumeData || isResumeDataLoading ? (
-        <div>Loading...</div>
+        <LoadingSpinner />
       ) : (
         <>
           <Heading text="Contact" level="h1" />
