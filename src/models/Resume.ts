@@ -28,6 +28,9 @@ export type ResumeModel = {
   email: string
   phone: string
   address: string
+  linkedinProfile: string
+  githubProfile: string
+  aboutMe: string
   summary: string
   experience: ExperienceModel[]
   education: EducationModel[]

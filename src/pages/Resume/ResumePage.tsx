@@ -1,25 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import ContentWrapper from '../../components/ContentWrapper'
-import { getResume } from '../../data/Resume'
-import { ResumeModel } from '../../models/Resume'
+import { useResume } from '../../contexts/ResumeContext'
 import Resume from './components/Resume'
 
 const ResumePage: React.FC = () => {
-  const [resumeData, setResumeData] = useState<ResumeModel | null>(null)
-
-  useEffect(() => {
-    const fetchResumeData = async () => {
-      const data = await getResume()
-      setResumeData(data)
-    }
-
-    fetchResumeData()
-  }, []) // The empty array ensures this effect runs only once when the component mounts
-
+  const { resumeData, isResumeDataLoading } = useResume()
   return (
     <ContentWrapper>
-      {resumeData ? <Resume {...resumeData} /> : <div>Loading...</div>}
+      {!resumeData || isResumeDataLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <Resume {...resumeData} />
+      )}
     </ContentWrapper>
   )
 }

@@ -2,10 +2,11 @@ import '@testing-library/jest-dom'
 
 import { render, screen } from '@testing-library/react'
 
+import { ResumeModel } from '../../../models/Resume'
 import Resume from './Resume'
 
 describe('Resume Component', () => {
-  const mockProps = {
+  const mockProps: ResumeModel = {
     name: 'John Doe',
     email: 'john.doe@example.com',
     phone: '123-456-7890',
@@ -31,7 +32,10 @@ describe('Resume Component', () => {
         description: 'Bachelor of Science in Computer Science'
       }
     ],
-    skills: ['JavaScript', 'React', 'Node.js']
+    skills: ['JavaScript', 'React', 'Node.js'],
+    linkedinProfile: '',
+    githubProfile: '',
+    aboutMe: ''
   }
 
   test('renders the Resume component with provided information', () => {

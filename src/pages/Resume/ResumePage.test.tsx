@@ -1,30 +1,54 @@
+// ResumePage.test.tsx
+
 import '@testing-library/jest-dom'
 
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
-import * as ResumeData from '../../data/Resume'
+import * as ResumeContextModule from '../../contexts/ResumeContext'
+import { ResumeModel } from '../../models/Resume'
 import ResumePage from './ResumePage'
 
-const mockResumeData = {
-  ...ResumeData.dummyResume
+const mockResumeData: ResumeModel = {
+  education: [],
+  experience: [],
+  skills: [],
+  aboutMe: 'Test About Me Text',
+  name: 'Testy McTesterson',
+  email: 'test@test.com',
+  phone: '5555555',
+  address: '123 Test St',
+  linkedinProfile: 'testy-linkedin',
+  githubProfile: 'testy-github',
+  summary: ''
 }
 
 beforeEach(() => {
-  jest.spyOn(ResumeData, 'getResume').mockResolvedValue(mockResumeData)
+  jest.spyOn(ResumeContextModule, 'useResume').mockReturnValue({
+    resumeData: mockResumeData,
+    isResumeDataLoading: false,
+    resumeError: null
+  })
+})
+
+afterEach(() => {
+  jest.resetAllMocks()
 })
 
 describe('ResumePage Component', () => {
-  test('shows loading initially and then loads and displays resume data', async () => {
+  test('displays loading indicator when data is loading', () => {
+    jest.spyOn(ResumeContextModule, 'useResume').mockReturnValue({
+      resumeData: undefined,
+      isResumeDataLoading: true,
+      resumeError: null
+    })
+
+    render(<ResumePage />)
+    expect(screen.getByText('Loading...')).toBeInTheDocument()
+  })
+
+  test('renders Resume component when data is loaded', () => {
     render(<ResumePage />)
 
-    // Check for loading state
-    expect(screen.getByText('Loading...')).toBeInTheDocument()
-
-    // Wait for loading to finish and component to update
-    await waitFor(() => {
-      // Now that the promise is resolved, we check the assertions within this waitFor block
-      expect(screen.queryByText('Loading...')).not.toBeInTheDocument()
-      expect(screen.getByText(mockResumeData.name)).toBeInTheDocument()
-    })
+    expect(screen.getByText(mockResumeData.name)).toBeInTheDocument()
   })
 })

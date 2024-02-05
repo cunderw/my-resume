@@ -3,8 +3,12 @@ import { ResumeModel } from '../models/Resume'
 const dummyResume: ResumeModel = {
   name: 'Carson Underwood',
   email: 'cunderw@gmail.com',
-  phone: '417-379-8016',
+  phone: '4173798016',
   address: '328 Brenda Dr. Ozark, MO 65721',
+  linkedinProfile: 'cunderw',
+  githubProfile: 'cunderw',
+  aboutMe:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   summary:
     'A software engineer with skills required and a strong desire to produce high quality software. Focused on reducing time to feedback by creating strong, reliable and maintainable applications.',
   experience: [
