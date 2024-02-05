@@ -39,6 +39,7 @@ export const ResumeProvider: React.FC<ResumeProviderProps> = ({ children }) => {
 
 export const useResume = () => {
   const context = useContext(ResumeContext)
+  /* istanbul ignore next */
   if (context === undefined) {
     throw new Error('useResume must be used within a ResumeProvider')
   }

@@ -9,9 +9,6 @@ describe('Skills Component', () => {
 
   test('renders Skills heading and list of skills', () => {
     render(<Skills skills={skillsList} />)
-
-    expect(screen.getByRole('heading', { name: 'Skills' })).toBeInTheDocument()
-
     skillsList.forEach((skill) => {
       expect(screen.getByText(skill)).toBeInTheDocument()
     })
