@@ -24,7 +24,7 @@ const Experience: React.FC<ExperienceModel> = ({
       <BodyText text={description} mb={2} />
       {otherRoles && (
         <>
-          <Heading text="Other Roles" level="h4" />
+          <Heading text="Other Roles" level="h2" />
           <List items={otherRoles} />
         </>
       )}

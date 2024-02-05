@@ -12,9 +12,10 @@ const Education: React.FC<EducationModel> = ({
 }) => {
   return (
     <div className="mb-6">
-      <Heading text={institution} />
+      <Heading text={institution} level="h2" />
       <BodyText text={`${location} | ${year}`} mb={2} />
       <BodyText text={description} />
+      <hr className="mt-4" />
     </div>
   )
 }

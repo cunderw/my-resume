@@ -4,19 +4,19 @@ const dummyResume: ResumeModel = {
   name: 'Carson Underwood',
   email: 'cunderw@gmail.com',
   phone: '4173798016',
-  address: '328 Brenda Dr. Ozark, MO 65721',
+  address: 'Ozark, MO',
   linkedinProfile: 'cunderw',
   githubProfile: 'cunderw',
   aboutMe:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    'My extensive experience in software development, encompassing roles in project management, QA Automation supervision, and software engineering, has equipped me with a diverse skill set and a unique perspective that I am eager to bring to any team.\n At the core of my career is a deep-rooted passion for creating impactful software solutions. My journey in the field has been marked by a series of challenging roles, each contributing to my comprehensive understanding of the software development lifecycle. This experience is further enhanced by my background in QA and automation, granting me the ability to foresee potential issues and proactively address them, ensuring a robust and user-centric product.\nMy career has been characterized by versatility, having worked in teams ranging from small groups of 3-5 to large-scale collaborations of over 200 members. This experience has not only honed my technical abilities but has also developed my skills in communication, leadership, and collaboration. I have had the privilege of mentoring and supervising other engineers, delivering talks, and driving projects to successful completion. These experiences have instilled in me the value of teamwork, innovation, and user-focused development, principles that drive me to create the best software possible.',
   summary:
-    'A software engineer with skills required and a strong desire to produce high quality software. Focused on reducing time to feedback by creating strong, reliable and maintainable applications.',
+    'A software engineer with the required and a strong desire to produce high quality software. Focused on reducing time to feedback by creating strong, reliable and maintainable applications.',
   experience: [
     {
       title: 'Software Engineer III',
       company: 'World Wide Technology',
       location: 'Springfield, MO',
-      otherRoles: ['Software Engineer III', 'Sr. QA Engineer', 'QA Engineer'],
+      otherRoles: ['Software Engineer II', 'Sr. QA Engineer', 'QA Engineer'],
       from: 'Oct. 2021',
       to: 'Feb. 2024',
       description: 'Developed full stack applications for various clients.',
@@ -160,7 +160,9 @@ const dummyResume: ResumeModel = {
     'Docker',
     'Kubernetes',
     'Ansible',
-    'Flutter/Dart'
+    'Flutter/Dart',
+    'React',
+    'React Native'
   ]
 }
 

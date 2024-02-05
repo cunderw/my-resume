@@ -17,7 +17,7 @@ const ContactPage = () => {
             <div>
               <a
                 href={`mailto:${resumeData.email}`}
-                className="flex items-center justify-center space-x-2 hover:text-blue-600"
+                className="flex items-center justify-start space-x-2 hover:text-blue-600"
               >
                 <FaEnvelope />
                 <span>{resumeData.email}</span>
@@ -25,10 +25,19 @@ const ContactPage = () => {
             </div>
             <div>
               <a
+                href={`tel:+${resumeData.phone}`}
+                className="flex items-center justify-start space-x-2 hover:text-blue-600"
+              >
+                <FaPhone />
+                <span>{resumeData.phone}</span>
+              </a>
+            </div>
+            <div>
+              <a
                 href={`https://www.linkedin.com/in/${resumeData.linkedinProfile}/`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 hover:text-blue-600"
+                className="flex items-center justify-start space-x-2 hover:text-blue-600"
               >
                 <FaLinkedin />
                 <span>{`LinkedIn/${resumeData.linkedinProfile}`}</span>
@@ -39,19 +48,10 @@ const ContactPage = () => {
                 href={`https://github.com/${resumeData.githubProfile}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 hover:text-blue-600"
+                className="flex items-center justify-start space-x-2 hover:text-blue-600"
               >
                 <FaGithub />
                 <span>{`Github/${resumeData.githubProfile}`}</span>
-              </a>
-            </div>
-            <div>
-              <a
-                href={`tel:+${resumeData.phone}`}
-                className="flex items-center justify-center space-x-2 hover:text-blue-600"
-              >
-                <FaPhone />
-                <span>{resumeData.phone}</span>
               </a>
             </div>
           </div>

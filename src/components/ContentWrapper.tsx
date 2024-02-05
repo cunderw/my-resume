@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react'
 
 type WrapperProps = {
-  children: ReactNode // Accepts any valid React child(ren)
+  children: ReactNode
 }
 
 const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   return (
     <div className="flex justify-center">
-      <div className="mx-auto max-w-4xl rounded-lg bg-white p-6 shadow-lg">
+      <div className=" w-full max-w-4xl overflow-auto rounded-lg bg-white p-6 shadow-lg md:h-[1200px]">
         {children}
       </div>
     </div>
