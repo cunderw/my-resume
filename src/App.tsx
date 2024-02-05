@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import { ResumeProvider } from './contexts/ResumeContext'
 import AboutPage from './pages/About/AboutPage'
 import ContactPage from './pages/Contact/ContactPage'
+import Footer from './pages/Resume/components/Footer'
 import ResumePage from './pages/Resume/ResumePage'
 
 const queryClient = new QueryClient()
@@ -24,6 +25,7 @@ function App() {
               <Route path="/" element={<AboutPage />} />
             </Routes>
           </div>
+          <Footer />
         </Router>
       </ResumeProvider>
     </QueryClientProvider>
