@@ -20,7 +20,9 @@ const AboutPage: React.FC = () => {
           </div>
           <div className="flex flex-col space-y-4 md:col-span-1">
             <Heading text="About Me" />
-            <BodyText text={resumeData.aboutMe} />
+            {resumeData.aboutMe.split('\n').map((text, index) => (
+              <BodyText key={index} text={text} />
+            ))}
           </div>
         </div>
       )}

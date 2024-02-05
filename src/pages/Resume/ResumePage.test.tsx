@@ -2,7 +2,7 @@
 
 import '@testing-library/jest-dom'
 
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 
 import * as ResumeContextModule from '../../contexts/ResumeContext'
 import { ResumeModel } from '../../models/Resume'
@@ -19,7 +19,8 @@ const mockResumeData: ResumeModel = {
   address: '123 Test St',
   linkedinProfile: 'testy-linkedin',
   githubProfile: 'testy-github',
-  summary: ''
+  summary: '',
+  pdfStorageLoc: 'test.pdf'
 }
 
 beforeEach(() => {
@@ -46,7 +47,7 @@ describe('ResumePage Component', () => {
     expect(screen.getByText('Loading...')).toBeInTheDocument()
   })
 
-  test('renders Resume component when data is loaded', () => {
+  test('renders Resume component when data is loaded', async () => {
     render(<ResumePage />)
 
     expect(screen.getByText(mockResumeData.name)).toBeInTheDocument()

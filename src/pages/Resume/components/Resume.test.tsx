@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 
 import { ResumeModel } from '../../../models/Resume'
 import Resume from './Resume'
@@ -35,11 +35,16 @@ describe('Resume Component', () => {
     skills: ['JavaScript', 'React', 'Node.js'],
     linkedinProfile: '',
     githubProfile: '',
-    aboutMe: ''
+    aboutMe: '',
+    pdfStorageLoc: 'test.pdf'
   }
 
-  test('renders the Resume component with provided information', () => {
+  test('renders the Resume component with provided information', async () => {
     render(<Resume {...mockProps} />)
+
+    await waitFor(() => {
+      expect(screen.getByText('Download Resume')).toBeInTheDocument()
+    })
 
     expect(
       screen.getByRole('heading', { name: mockProps.name })

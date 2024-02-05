@@ -38,6 +38,7 @@ export type ResumeModel = {
   experience: ExperienceModel[]
   education: EducationModel[]
   skills: string[]
+  pdfStorageLoc: string
 }
 
 export const mapResumeData = (data: DocumentData): ResumeModel => {
@@ -71,6 +72,7 @@ export const mapResumeData = (data: DocumentData): ResumeModel => {
       year: edu.year,
       description: edu.description
     })),
-    skills: data.skills
+    skills: data.skills,
+    pdfStorageLoc: data.pdfStorageLoc
   }
 }
