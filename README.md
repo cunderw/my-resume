@@ -2,8 +2,8 @@
 
 # Getting Started
 ```bash
-yarn install
-yarn dev
+npm install
+npm dev
 ```
 
 # Features
@@ -12,4 +12,6 @@ yarn dev
 - Imports sort & Unused imports
 - [Svgr](https://react-svgr.com/)
 - Prettier & Eslint for Tailwindcss
-- React Route 
+- React Router for navigation
+- Firestore for a CMS
+- React Testing Library for unit tests 
