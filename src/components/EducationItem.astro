@@ -1,0 +1,19 @@
+---
+import type { EducationData } from '@/types/resume'
+
+interface Props {
+  education: EducationData
+}
+
+const { education } = Astro.props
+const { institution, location, year, description } = education
+---
+
+<div class="mb-4 border-l-2 border-slate-700 pl-4 hover:border-cyan-500/50 transition-colors">
+  <div class="flex items-start justify-between">
+    <span class="font-semibold text-slate-100">{institution}</span>
+    <span class="ml-4 shrink-0 font-mono text-xs text-slate-500">{year}</span>
+  </div>
+  <p class="mt-0.5 text-xs text-slate-500">{location}</p>
+  <p class="mt-1 text-sm leading-relaxed text-slate-400">{description}</p>
+</div>

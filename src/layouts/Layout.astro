@@ -1,0 +1,41 @@
+---
+import Navbar from '@/components/Navbar.astro'
+
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description = 'Carson Underwood — Software Engineer' } = Astro.props
+const currentPath = Astro.url.pathname
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-slate-900 font-sans">
+    <Navbar currentPath={currentPath} />
+    <main class="pt-16">
+      <div class="mx-auto max-w-4xl px-4 py-8">
+        <slot />
+      </div>
+    </main>
+    <footer class="border-t border-slate-700/50 bg-slate-900 py-6 text-center text-xs text-slate-500">
+      <a
+        href="https://github.com/cunderw"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-cyan-400 hover:underline"
+      >
+        github.com/cunderw
+      </a>
+    </footer>
+  </body>
+</html>

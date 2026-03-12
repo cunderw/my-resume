@@ -1,0 +1,33 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { resume } from '@/data/resume'
+import profileImage from '@/assets/images/profile.png'
+
+const paragraphs = resume.aboutMe.split('\n').filter(Boolean)
+---
+
+<Layout title="About — Carson Underwood">
+  <div class="rounded-xl border border-slate-700/50 bg-slate-800 p-8 shadow-xl">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div class="flex justify-center md:justify-start">
+        <img
+          src={profileImage.src}
+          alt={resume.name}
+          loading="eager"
+          width="200"
+          height="200"
+          class="h-48 w-48 rounded-full object-cover ring-2 ring-cyan-500/40"
+        />
+      </div>
+      <div class="md:col-span-2">
+        <h1 class="mb-1 text-2xl font-bold text-slate-100">{resume.name}</h1>
+        <p class="mb-4 font-mono text-sm text-cyan-400">Software Engineer</p>
+        <div class="space-y-3">
+          {paragraphs.map((p) => (
+            <p class="text-sm leading-relaxed text-slate-300">{p}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,66 @@
+---
+import type { ExperienceData } from '@/types/resume'
+
+interface Props {
+  experience: ExperienceData
+}
+
+const { experience } = Astro.props
+const { title, company, location, from, to, description, duties, otherRoles, projects } = experience
+---
+
+<div class="border-l-2 border-slate-700 pl-4 hover:border-cyan-500/50 transition-colors">
+  <div class="flex items-start justify-between">
+    <div>
+      <span class="font-semibold text-slate-100">{title}</span>
+      <span class="text-slate-600"> — </span>
+      <span class="text-cyan-400">{company}</span>
+    </div>
+    <span class="ml-4 shrink-0 font-mono text-xs text-slate-500">{from} – {to}</span>
+  </div>
+  <p class="mt-0.5 text-xs text-slate-500">{location}</p>
+  <p class="mt-2 text-sm leading-relaxed text-slate-400">{description}</p>
+
+  {
+    otherRoles && otherRoles.length > 0 && (
+      <div class="mt-2">
+        <p class="text-xs font-medium text-slate-500">Other Roles:</p>
+        <ul class="mt-1 list-disc pl-5 text-sm text-slate-400">
+          {otherRoles.map((role) => (
+            <li>{role}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    duties && duties.length > 0 && (
+      <ul class="mt-2 list-disc pl-5 text-sm leading-relaxed text-slate-400">
+        {duties.map((duty) => (
+          <li>{duty}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  {
+    projects && projects.length > 0 && (
+      <div class="mt-3 space-y-3">
+        {projects.map((project) => (
+          <div class="rounded-md border border-slate-700/50 bg-slate-900/40 p-3">
+            <p class="font-mono text-sm font-medium text-cyan-300">{project.name}</p>
+            <p class="mt-0.5 text-sm leading-relaxed text-slate-400">{project.description}</p>
+            {project.duties && project.duties.length > 0 && (
+              <ul class="mt-2 list-disc pl-5 text-sm text-slate-400">
+                {project.duties.map((duty) => (
+                  <li>{duty}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+    )
+  }
+</div>
