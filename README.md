@@ -1,17 +1,18 @@
-# Carson Underwood Resume 
+# cunderw.dev
 
-# Getting Started
+Personal resume and portfolio site for Carson Underwood, deployed at [cunderw.dev](https://cunderw.dev).
+
+Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com) as a fully static site.
+
+## Getting Started
+
 ```bash
 npm install
-npm dev
+npm run dev      # Start dev server at localhost:4321
+npm run build    # Build static site to dist/
+npm run preview  # Preview production build locally
 ```
 
-# Features
-- [Speedy Web Compiler](https://swc.rs/)  for fast compilation times
-- Relative paths
-- Imports sort & Unused imports
-- [Svgr](https://react-svgr.com/)
-- Prettier & Eslint for Tailwindcss
-- React Router for navigation
-- Firestore for a CMS
-- React Testing Library for unit tests 
+## Structure
+
+All resume content lives in `src/data/resume.ts` — edit that file to update any content on the site.
