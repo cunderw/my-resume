@@ -11,10 +11,14 @@ const links = [
   { href: '/contact', label: 'Contact' },
 ]
 
+const projects = [{ href: '/projects/battle-buddies', label: 'Battle Buddies' }]
+
 function isActive(href: string): boolean {
   if (href === '/') return currentPath === '/' || currentPath === ''
   return currentPath.startsWith(href)
 }
+
+const projectsActive = currentPath.startsWith('/projects')
 ---
 
 <nav class="fixed top-0 z-10 w-full border-b border-slate-700/50 bg-slate-900/80 shadow-lg backdrop-blur-md">
@@ -40,6 +44,45 @@ function isActive(href: string): boolean {
           </li>
         ))
       }
+      <li class="group relative">
+        {/* CSS-only dropdown (hover/focus-within) — the site ships no client JS. */}
+        <a
+          href={projects[0].href}
+          aria-haspopup="true"
+          class:list={[
+            'inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-medium transition-all',
+            projectsActive
+              ? 'bg-cyan-500/10 text-cyan-400 ring-1 ring-cyan-500/30'
+              : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200',
+          ]}
+        >
+          Projects
+          <svg class="h-3 w-3 transition-transform group-hover:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2.5 4.5 6 8l3.5-3.5" />
+          </svg>
+        </a>
+        <ul
+          class="invisible absolute right-0 top-full z-20 mt-1 min-w-44 rounded-lg border border-slate-700/50 bg-slate-900/95 p-1 opacity-0 shadow-xl backdrop-blur-md transition-all group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
+        >
+          {
+            projects.map(({ href, label }) => (
+              <li>
+                <a
+                  href={href}
+                  class:list={[
+                    'block rounded-md px-3 py-1.5 text-sm font-medium transition-all',
+                    isActive(href)
+                      ? 'bg-cyan-500/10 text-cyan-400'
+                      : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200',
+                  ]}
+                >
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </li>
     </ul>
   </div>
 </nav>

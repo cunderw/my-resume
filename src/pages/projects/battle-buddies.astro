@@ -1,0 +1,116 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+const features = [
+  {
+    title: 'Real habits, real XP',
+    body: 'Workouts, steps, stand time, mindful minutes, and sleep flow in from Apple Health and become XP across six classic RPG attributes — plus an honor-system quick log for the things sensors can’t see, like reading or practicing a skill.',
+  },
+  {
+    title: 'A buddy that grows with you',
+    body: 'Your pixel-art buddy levels up and visually evolves through six tiers as you stay consistent. Streaks (with a weekly rest-day shield) reward showing up, not bingeing.',
+  },
+  {
+    title: 'Social by design',
+    body: 'Connect with friends via invite links, nudge each other, run week-long stat duels, and pit your buddies against each other in deterministic auto-battles replayed as pixel-art fights.',
+  },
+  {
+    title: 'Private by architecture',
+    body: 'There is no server. Everything lives in your own iCloud via CloudKit; buddy features use Apple’s zone sharing between the participants’ accounts. No ads, no analytics, no accounts.',
+  },
+]
+
+const tech = [
+  ['SwiftUI + SwiftData', 'iOS 17 and watchOS 10 apps sharing a Swift package core'],
+  ['CloudKit', 'the entire backend: private-database sync, CKShare zones, push subscriptions'],
+  ['Deterministic battle sim', 'seeded combat math, re-verified on the opponent’s device — no server referee'],
+  ['AI pixel-art pipeline', 'sprites, icons, and backdrops generated via an image model, then quantized to a true pixel grid with reproducible recipes'],
+]
+---
+
+<Layout
+  title="Battle Buddies — Carson Underwood"
+  description="A native iOS + watchOS habit RPG where real-world healthy habits level up your pixel-art buddy."
+>
+  <div class="space-y-8">
+    <div class="rounded-xl border border-slate-700/50 bg-slate-800 p-8 shadow-xl">
+      <div class="flex flex-col items-start gap-6 md:flex-row md:items-center">
+        <img
+          src="/projects/battle-buddies/icon.png"
+          alt="Battle Buddies app icon — two pixel-art adventurers fist-bumping"
+          width="96"
+          height="96"
+          class="rounded-2xl border border-slate-700/50 shadow-lg [image-rendering:pixelated]"
+        />
+        <div>
+          <h1 class="text-2xl font-bold text-slate-100">Battle Buddies</h1>
+          <p class="mt-1 text-sm leading-relaxed text-slate-300">
+            A native iOS + Apple Watch habit RPG: your real workouts, reading, and meditation
+            level up a pixel-art buddy — then your buddy battles your friends&rsquo;.
+          </p>
+          <p class="mt-2 font-mono text-xs text-slate-500">
+            SwiftUI · CloudKit · watchOS · currently in TestFlight beta
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-3">
+      <img
+        src="/projects/battle-buddies/home.png"
+        alt="Home screen: pixel buddy Rex at level 1 with today's XP per attribute"
+        class="w-full rounded-xl border border-slate-700/50 shadow-lg"
+        loading="lazy"
+      />
+      <img
+        src="/projects/battle-buddies/duel.png"
+        alt="Buddy profile with an active week-long duel and battle card"
+        class="w-full rounded-xl border border-slate-700/50 shadow-lg"
+        loading="lazy"
+      />
+      <img
+        src="/projects/battle-buddies/battle.png"
+        alt="Pixel-art battle replay in a gym arena with a victory banner"
+        class="w-full rounded-xl border border-slate-700/50 shadow-lg"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="rounded-xl border border-slate-700/50 bg-slate-800 p-8 shadow-xl">
+      <h2 class="mb-4 text-base font-semibold text-slate-100">What it does</h2>
+      <div class="space-y-5 text-sm leading-relaxed text-slate-300">
+        {
+          features.map(({ title, body }) => (
+            <section>
+              <h3 class="mb-1 font-semibold text-cyan-400">{title}</h3>
+              <p class="text-slate-400">{body}</p>
+            </section>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-slate-700/50 bg-slate-800 p-8 shadow-xl">
+      <h2 class="mb-4 text-base font-semibold text-slate-100">How it&rsquo;s built</h2>
+      <ul class="space-y-2 text-sm">
+        {
+          tech.map(([name, detail]) => (
+            <li class="flex gap-2 text-slate-400">
+              <span class="select-none text-cyan-500">&rsaquo;</span>
+              <span>
+                <strong class="text-slate-300">{name}</strong> — {detail}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-6 text-sm text-slate-400">
+        Privacy policy:
+        <a href="/privacy-policy/battle-buddies" class="text-cyan-400 hover:underline">
+          cunderw.dev/privacy-policy/battle-buddies
+        </a>
+        &middot; Questions? <a href="/contact" class="text-cyan-400 hover:underline">Get in touch</a>.
+      </p>
+    </div>
+  </div>
+</Layout>
