@@ -1,0 +1,105 @@
+---
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout
+  title="Battle Buddies Privacy Policy — Carson Underwood"
+  description="Privacy policy for the Battle Buddies iOS and watchOS app."
+>
+  <div class="rounded-xl border border-slate-700/50 bg-slate-800 p-8 shadow-xl">
+    <h1 class="mb-2 text-2xl font-bold text-slate-100">Battle Buddies — Privacy Policy</h1>
+    <p class="mb-8 font-mono text-xs text-slate-500">Last updated: July 13, 2026</p>
+
+    <div class="space-y-6 text-sm leading-relaxed text-slate-300">
+      <section>
+        <p>
+          Battle Buddies is designed so that <strong class="text-slate-100">I (the developer) never
+          see your data</strong>. There is no server, no analytics service, and no account system
+          operated by me. This app-specific policy supplements my
+          <a href="/privacy-policy" class="text-cyan-400 hover:underline">general privacy policy</a>
+          and takes precedence for Battle Buddies where they differ.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">What the App Reads</h2>
+        <ul class="mt-2 space-y-1">
+          <li class="flex gap-2 text-slate-400"><span class="text-cyan-500 select-none">›</span><span><strong class="text-slate-300">Health data</strong> (with your permission): workouts, steps, stand time, mindful minutes, and sleep — read on your device, only to award XP to your character. The app never writes to Health in normal use.</span></li>
+          <li class="flex gap-2 text-slate-400"><span class="text-cyan-500 select-none">›</span><span><strong class="text-slate-300">Manual activity logs</strong> you enter by hand.</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">Where Your Data Lives</h2>
+        <p>
+          On your devices, and in <strong class="text-slate-100">your private iCloud
+          database</strong> (synced by Apple's CloudKit under your Apple ID). Apple's iCloud terms
+          apply; I have no access to it. Raw health data never leaves your device — only derived XP
+          awards and your character's stats are stored and synced.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">What Buddies Can See</h2>
+        <p>
+          When you connect with a buddy via an invite link, a shared zone in iCloud holds: your
+          character summary (name, sprite, level, streak, attribute XP totals, recent-week XP
+          total), nudges, duels, and battle records between the two of you. Buddies never see raw
+          health data, individual activities, or anything about your other buddies. Removing a
+          buddy deletes the shared zone.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">Notifications</h2>
+        <p>
+          All notifications are generated on your device. Silent CloudKit pushes wake the app to
+          sync; anything visible is composed locally and can be disabled per category in Settings.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">Third-Party Services</h2>
+        <p>
+          Battle Buddies does not integrate with any third-party analytics, advertising, or data
+          collection services. The only service involved is Apple's iCloud/CloudKit, under your own
+          Apple ID.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">Deleting Your Data</h2>
+        <p>
+          Settings → Account → <strong class="text-slate-100">Delete Buddy &amp; All Data</strong>
+          removes your character, activity history, buddy connections (including shared zones), and
+          the synced copy in your iCloud database. Health data is managed by iOS and is never
+          stored by the app.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">Children's Privacy</h2>
+        <p>
+          Battle Buddies does not knowingly collect any information from anyone, including children
+          under the age of 13.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">Changes to This Policy</h2>
+        <p>
+          If this policy changes in the future, the updated version will be posted at this URL with
+          a revised "last updated" date.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-base font-semibold text-slate-100">Contact</h2>
+        <p>
+          If you have any questions about this privacy policy, you can reach me at
+          <a href="/contact" class="text-cyan-400 hover:underline">cunderw.dev/contact</a>.
+        </p>
+      </section>
+    </div>
+  </div>
+</Layout>
