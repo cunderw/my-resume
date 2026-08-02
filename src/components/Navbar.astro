@@ -11,7 +11,10 @@ const links = [
   { href: '/contact', label: 'Contact' },
 ]
 
-const projects = [{ href: '/projects/battle-buddies', label: 'Battle Buddies' }]
+const projects = [
+  { href: '/projects/battle-buddies', label: 'Battle Buddies' },
+  { href: '/projects/tower', label: 'Tower' },
+]
 
 function isActive(href: string): boolean {
   if (href === '/') return currentPath === '/' || currentPath === ''
