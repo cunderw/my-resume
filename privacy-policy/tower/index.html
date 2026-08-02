@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Privacy policy for the Tower iOS app, a native client for your own Unraid server."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" href="https://rsms.me/inter/inter.css"><title>Tower Privacy Policy — Carson Underwood</title><link rel="stylesheet" href="/_astro/contact.kjihVeLe.css"></head> <body class="bg-slate-900 font-sans"> <nav class="fixed top-0 z-10 w-full border-b border-slate-700/50 bg-slate-900/80 shadow-lg backdrop-blur-md"> <div class="mx-auto flex max-w-4xl flex-col items-center gap-1.5 px-4 py-3 sm:flex-row sm:justify-between"> <a href="/" class="font-mono text-lg font-semibold text-cyan-400 hover:text-cyan-300"> <span class="text-slate-500">&gt;</span> cunderw
+</a> <ul class="flex flex-wrap items-center justify-center gap-1 sm:gap-2"> <li> <a href="/" class="inline-flex items-center rounded-md px-2.5 py-1.5 text-sm font-medium transition-all sm:px-3 text-slate-400 hover:bg-slate-800 hover:text-slate-200"> About </a> </li><li> <a href="/resume" class="inline-flex items-center rounded-md px-2.5 py-1.5 text-sm font-medium transition-all sm:px-3 text-slate-400 hover:bg-slate-800 hover:text-slate-200"> Resume </a> </li><li> <a href="/contact" class="inline-flex items-center rounded-md px-2.5 py-1.5 text-sm font-medium transition-all sm:px-3 text-slate-400 hover:bg-slate-800 hover:text-slate-200"> Contact </a> </li> <li class="group relative">  <a href="/projects/battle-buddies" aria-haspopup="true" class="inline-flex items-center gap-1 rounded-md px-2.5 py-1.5 text-sm font-medium transition-all sm:px-3 text-slate-400 hover:bg-slate-800 hover:text-slate-200">
+Projects
+<svg class="h-3 w-3 transition-transform group-hover:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"> <path d="M2.5 4.5 6 8l3.5-3.5"></path> </svg> </a> <ul class="invisible absolute right-0 top-full z-20 mt-1 min-w-44 rounded-lg border border-slate-700/50 bg-slate-900/95 p-1 opacity-0 shadow-xl backdrop-blur-md transition-all group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"> <li> <a href="/projects/battle-buddies" class="block rounded-md px-3 py-1.5 text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-slate-200"> Battle Buddies </a> </li><li> <a href="/projects/tower" class="block rounded-md px-3 py-1.5 text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-slate-200"> Tower </a> </li> </ul> </li> </ul> </div> </nav> <main class="pt-24 sm:pt-16"> <div class="mx-auto max-w-4xl px-4 py-8">  <div class="rounded-xl border border-slate-700/50 bg-slate-800 p-8 shadow-xl"> <h1 class="mb-2 text-2xl font-bold text-slate-100">Tower — Privacy Policy</h1> <p class="mb-8 font-mono text-xs text-slate-500">Last updated: August 1, 2026</p> <div class="space-y-6 text-sm leading-relaxed text-slate-300"> <section> <p>
+Tower talks directly to <strong class="text-slate-100">a server you own</strong>. There
+          is no service in the middle: no backend of mine, no account system, no analytics, and
+          nothing of yours on anybody else&rsquo;s computer. <strong class="text-slate-100">I (the developer) never see your data</strong>, because none of it is ever sent to me. This app-specific policy supplements my
+<a href="/privacy-policy" class="text-cyan-400 hover:underline">general privacy policy</a>
+and takes precedence for Tower where they differ.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">What the App Stores</h2> <ul class="mt-2 space-y-1"> <li class="flex gap-2 text-slate-400"> <span class="select-none text-cyan-500">&rsaquo;</span><span><strong class="text-slate-300">Your server address and API key</strong> — the two
+              things you enter to connect. Both are kept in the
+<strong class="text-slate-300">iOS keychain</strong> on your device and are never transmitted
+              anywhere except to the server you pointed them at.</span> </li> <li class="flex gap-2 text-slate-400"> <span class="select-none text-cyan-500">&rsaquo;</span><span><strong class="text-slate-300">Local preferences</strong>, such as your light/dark
+              appearance override.</span> </li> </ul> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">What the App Reads</h2> <p>
+Everything Tower displays is read live from your own server over your own network:
+          array and disk status, system metrics, Docker containers, virtual machines, user
+          shares, server notifications, and system log files. It is fetched to be drawn on
+          screen. Tower keeps no history of it, builds no profile from it, and uploads none of
+          it.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">Where Your Data Lives</h2> <p>
+On your device and on your server &mdash; nowhere else. Tower has no cloud component
+          of any kind: no iCloud sync, no remote database, no crash reporting, no telemetry. If
+          your server is not reachable from your device, Tower shows you nothing, because there
+          is no copy anywhere else to fall back on.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">Notifications</h2> <p>
+The notifications Tower shows are the ones your server has raised, read from its API
+          and displayed inside the app. Tower does not use Apple&rsquo;s push notification
+          service, so nothing about your server passes through Apple&rsquo;s (or my)
+          infrastructure to reach you.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">Third-Party Services</h2> <p>
+None. Tower integrates no analytics, advertising, attribution, or data-collection
+          service. Its only third-party code is
+<a href="https://github.com/apollographql/apollo-ios" class="text-cyan-400 hover:underline" rel="noopener">Apollo iOS</a>, an open-source GraphQL client that runs entirely on your device and only ever
+          contacts the server address you configured.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">Demo Mode</h2> <p>
+Tower includes a demo mode that runs the whole app against built-in sample data so you
+          can try it before connecting anything. Demo mode makes no network requests at all.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">Deleting Your Data</h2> <p>
+Disconnecting the server in Settings clears the stored address and API key from the
+          keychain. Deleting the app removes everything Tower has kept, since all of it lives in
+          the app&rsquo;s own storage. Nothing survives elsewhere for you to request the deletion
+          of &mdash; the data on your server is, and always was, yours.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">Children&rsquo;s Privacy</h2> <p>
+Tower does not knowingly collect any information from anyone, including children under
+          the age of 13.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">Changes to This Policy</h2> <p>
+If this policy changes in the future, the updated version will be posted at this URL
+          with a revised &ldquo;last updated&rdquo; date.
+</p> </section> <section> <h2 class="mb-2 text-base font-semibold text-slate-100">Contact</h2> <p>
+If you have any questions about this privacy policy, you can reach me at
+<a href="/contact" class="text-cyan-400 hover:underline">cunderw.dev/contact</a>.
+</p> </section> </div> </div>  </div> </main> <footer class="border-t border-slate-700/50 bg-slate-900 py-6 text-center text-xs text-slate-500"> <a href="https://github.com/cunderw" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 hover:underline">
+github.com/cunderw
+</a> </footer> </body></html>
