@@ -12,7 +12,18 @@ npm run preview  # Preview production build locally
 
 ## Architecture
 
-This is an **Astro static site** (`output: 'static'`) deployed to `cunderw.dev`. It has three pages: About (`/`), Resume (`/resume`), and Contact (`/contact`).
+This is an **Astro static site** (`output: 'static'`) deployed to `cunderw.dev` by GitHub Actions on every push to `main`.
+
+Personal pages: About (`/`), Resume (`/resume`), Contact (`/contact`), and a general privacy policy (`/privacy-policy`).
+
+**It also hosts the App Store URLs for each iOS app**, which is what every shipped app declares in App Store Connect — a GitHub link is not an acceptable substitute, and a link into a private repo 404s for App Review. Adding an app means four things, and missing either of the last two is the easy mistake:
+
+- `src/pages/projects/<slug>.astro` — marketing **and** support URL
+- `src/pages/privacy-policy/<slug>.astro` — privacy policy URL, supplementing `/privacy-policy`
+- `public/projects/<slug>/` — `icon.png` at 256x256 and three screenshots at 560x1216
+- a link in **both** indexes: the `projects` array in `src/components/Navbar.astro` and the app-specific list in `src/pages/privacy-policy.astro`
+
+The **publish-app-pages** skill does all four from an app repo's store copy.
 
 ### Content Management
 
