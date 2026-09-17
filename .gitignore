@@ -106,3 +106,7 @@ dist
 # Astro
 .astro/
 src/env.d.ts
+
+# macOS
+.DS_Store
+**/.DS_Store
