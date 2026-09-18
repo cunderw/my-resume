@@ -8,7 +8,7 @@ import Layout from '@/layouts/Layout.astro'
 >
   <div class="rounded-xl border border-slate-700/50 bg-slate-800 p-8 shadow-xl">
     <h1 class="mb-2 text-2xl font-bold text-slate-100">Driverr — Privacy Policy</h1>
-    <p class="mb-8 font-mono text-xs text-slate-500">Last updated: September 17, 2026</p>
+    <p class="mb-8 font-mono text-xs text-slate-500">Last updated: September 18, 2026</p>
 
     <div class="space-y-6 text-sm leading-relaxed text-slate-300">
       <section>
@@ -111,10 +111,14 @@ import Layout from '@/layouts/Layout.astro'
       <section>
         <h2 class="mb-2 text-base font-semibold text-slate-100">Deleting Your Data</h2>
         <p>
-          Removing a host deletes its stored details and any credential kept for it. Deleting the
-          app removes everything Driverr has kept, since all of it lives in the app&rsquo;s own
-          storage and the device keychain. Nothing survives elsewhere for you to request the
-          deletion of &mdash; the data on your machines is, and always was, yours.
+          You can delete individual hosts and SSH keys inside Driverr at any time. Deleting a host
+          also removes its saved password and remembered host key. Deleting an SSH key removes its
+          private key from the Keychain.
+        </p>
+        <p class="mt-3">
+          Deleting the app removes data in its app container, such as hosts and settings, but iOS
+          may retain Keychain items after an app is uninstalled. To remove saved credentials before
+          uninstalling Driverr, delete every host and SSH key inside the app first.
         </p>
       </section>
 
